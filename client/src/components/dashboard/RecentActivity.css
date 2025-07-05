@@ -1,0 +1,24 @@
+.recent-activity {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.recent-activity h4 {
+    margin-top: 0;
+}
+
+.recent-activity ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-activity li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.recent-activity li:last-child {
+    border-bottom: none;
+} 

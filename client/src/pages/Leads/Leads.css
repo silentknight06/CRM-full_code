@@ -1,0 +1,25 @@
+.leads-page {
+    padding: 20px 30px;
+}
+
+.leads-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.breadcrumbs {
+    color: #555;
+}
+
+.add-leads-btn {
+    background-color: #e9edf2;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+} 

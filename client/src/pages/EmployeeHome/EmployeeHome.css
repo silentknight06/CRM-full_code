@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+}
+
+.employee-home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.employee-main-content {
+  flex-grow: 1;
+  padding-bottom: 80px; /* Space for bottom nav on mobile */
+}
+
+.header-blue {
+  background-color: #4a90e2;
+  color: white;
+  padding: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.header-blue .logo {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.header-blue .logo .crm {
+  font-weight: normal;
+}
+
+.header-blue .greeting {
+  margin-top: 20px;
+  font-size: 1em;
+}
+
+.header-blue .user-name {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.content-grid {
+  padding: 20px;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.timing-card, .break-card, .activity-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.timing-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.check-in-out {
+    display: flex;
+    gap: 20px;
+}
+
+.check-in-out p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.check-in-out span {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.timing-toggle {
+  width: 36px;
+  height: 56px;
+  background: #fff; /* always white */
+  border-radius: 16px;
+  border: 3px solid #3256e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.timing-toggle .toggle-indicator {
+  width: 20px;
+  height: 48px;
+  border-radius: 10px;
+  margin: 0 auto;
+  transition: background 0.3s;
+}
+.timing-toggle.checked-in .toggle-indicator {
+  background: #a6ff00; /* neon green */
+  box-shadow: 0 0 0 2px #a6ff00;
+}
+.timing-toggle.checked-out .toggle-indicator {
+  background: #f44336; /* red */
+  box-shadow: 0 0 0 2px #f44336;
+}
+
+.break-card .break-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.break-header h3 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.break-header span {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.break-toggle {
+    width: 40px;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.break-list .break-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.break-list .break-item:last-child {
+    border-bottom: none;
+}
+
+.break-item p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.break-item span {
+    font-size: 1em;
+    color: #333;
+}
+
+.activity-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-card li {
+    padding: 10px 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* Mobile Bottom Nav */
+.employee-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.nav-item {
+  text-align: center;
+  color: #999;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  color: #4a90e2;
+}
+
+.nav-item p {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.nav-item span {
+  font-size: 0.8em;
+}
+
+/* Tablet and Desktop Styles */
+@media (min-width: 768px) {
+  .employee-home-page {
+    flex-direction: row;
+    background-color: #f7f9fc;
+  }
+
+  .employee-main-content {
+    flex-grow: 1;
+    padding: 20px;
+    padding-left: 110px; /* Space for sidebar + a little margin */
+  }
+
+  .header-blue {
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    grid-template-areas: none; /* Reset areas for a more flexible grid */
+  }
+
+  /* Re-ordering for a better visual flow on desktop */
+  .timings { order: 1; }
+  .break-section { order: 3; }
+  .recent-activity { order: 2; }
+
+  .timing-card, .break-card, .activity-card {
+    margin-bottom: 0; /* Remove bottom margin as gap property is used */
+    height: 100%; /* Make cards in a row have the same height */
+  }
+  
+  .employee-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 90px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 25px;
+    gap: 25px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.07);
+    background-color: #ffffff;
+  }
+
+  .nav-item span {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-grid {
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-areas:
+      "timings break"
+      "activity break";
+    align-items: flex-start; /* Better alignment for different height cards */
+  }
+  .timings { order: 0; grid-area: timings; }
+  .break-section { order: 0; grid-area: break; }
+  .recent-activity { order: 0; grid-area: activity; }
+} 

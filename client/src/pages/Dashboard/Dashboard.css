@@ -1,0 +1,103 @@
+/* Add your styles for the Dashboard component here */
+.dashboard {
+  padding: 24px 40px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dashboard-main {
+    display: flex;
+    margin-bottom: 24px;
+    gap: 24px;
+}
+
+.dashboard-chart-area {
+    flex-grow: 3;
+    margin-right: 24px;
+    min-width: 0;
+}
+
+.dashboard-activity-area {
+    flex-grow: 1;
+    min-width: 260px;
+}
+
+@media (max-width: 1200px) {
+    .dashboard {
+        padding: 16px 10px;
+    }
+    .stats-container {
+        gap: 12px;
+    }
+    .dashboard-main {
+        gap: 12px;
+    }
+    .dashboard-chart-area {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .dashboard-main {
+        flex-direction: column;
+        gap: 0;
+    }
+    .dashboard-chart-area {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .dashboard-activity-area {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 8px 2px;
+    }
+    .stats-container {
+        flex-direction: column;
+        gap: 0;
+    }
+    .stats-card {
+        margin: 10px 0;
+        width: 100%;
+        min-width: 0;
+    }
+    .dashboard-main {
+        flex-direction: column;
+        gap: 0;
+    }
+    .dashboard-chart-area {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .dashboard-activity-area {
+        min-width: 0;
+    }
+    .employees-table-container {
+        overflow-x: auto;
+        padding: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard {
+        padding: 2px 0;
+    }
+    .stats-card {
+        padding: 10px 6px;
+        font-size: 14px;
+    }
+    .employees-table-container {
+        padding: 0;
+    }
+} 
